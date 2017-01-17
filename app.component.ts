@@ -4,6 +4,7 @@ import {Component} from 'angular2/core';
     selector: 'my-app',
     template:`
     <h2 (click)="onSelect()" [class.click]="showDetails === true">{{contact.firstName}} {{contact.lastName}}</h2>
+    <input [(ngModel)]= "contact.firstName" type="text"/>
     <div *ngIf = "showDetails === true">
     Phone Number : {{contact.phone}}<br>
     Email ID: {{contact.email}}
